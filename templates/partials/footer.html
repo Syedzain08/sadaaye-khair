@@ -1,0 +1,89 @@
+<section class="bottom-0 bg-graphite-900 text-neutral-200" id="footer">
+  <div
+    class="flex flex-col lg:flex-row items-start py-6 md:py-8 px-4 md:px-10 gap-8 lg:gap-10"
+  >
+    <!-- Primary Column -->
+    <div class="relative w-full lg:w-2/5">
+      <h2 class="text-2xl md:text-4xl mb-3 md:mb-4 font-bold">
+        The Real Change <br />
+        Starts With You
+      </h2>
+      <p class="mb-6 md:mb-8 text-sm md:text-base">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolor
+        magnam in consequatur, voluptates quam eligendi? Cupiditate alias
+        debitis fuga?
+      </p>
+      <a
+        href="/"
+        class="px-4 py-3 mt-4 mb-6 rounded-xl bg-neutral-200 text-graphite-700 hover:bg-white active:bg-neutral-500 text-sm md:text-base inline-block"
+      >
+        Donate Now
+      </a>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="w-1/2 sm:w-auto lg:w-1/5">
+      <div class="flex flex-col gap-3 md:gap-4">
+        <h3 class="font-bold text-xl md:text-2xl">Quick Links</h3>
+        <ul class="space-y-2 text-sm md:text-base">
+          <li>
+            <a href="{{ url_for('index') }}#hero" class="hover:underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('index') }}#about-us" class="hover:underline"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="{{ url_for('index') }}#our-stories" class="hover:underline"
+              >Our Stories</a
+            >
+          </li>
+          <li><a href="/" class="hover:underline">Donate</a></li>
+          <li>
+            <a href="mailto:info.sadaayekhair@gmail.com" class="hover:underline"
+              >Volunteer</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="w-1/2 sm:w-auto lg:w-1/5">
+      <div class="flex flex-col gap-3 md:gap-4">
+        <h3 class="font-bold text-xl md:text-2xl">Contact</h3>
+        <ul class="space-y-2 text-sm md:text-base">
+          <li>
+            Email:
+            <a
+              href="mailto:info.sadaayekhair@gmail.com"
+              class="hover:underline text-neutral-300 break-all"
+            >
+              info.sadaayekhair@gmail.com
+            </a>
+          </li>
+          <li>Phone: <span class="text-neutral-300">+92 300 0000000</span></li>
+          <li>
+            Address: <span class="text-neutral-300">Lahore, Pakistan</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="w-full sm:w-2/3 md:w-1/2 lg:w-1/5">
+      <img
+        src="https://picsum.photos/600/400?random=4"
+        alt="footer-image"
+        class="rounded-xl w-full"
+      />
+    </div>
+  </div>
+
+  <div class="px-4 md:px-10 pb-6 text-xs md:text-sm text-neutral-400">
+    © 2025 Sadaaye Khair. All rights reserved.
+  </div>
+</section>
