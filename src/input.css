@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* Primary – Dark Walnut */
@@ -63,4 +64,36 @@
 
   /* Fonts */
   --font-primary: "Montserrat", "Roboto", sans-serif;
+}
+
+@layer utilities {
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spinOnce {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Define utilities for animations */
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out forwards;
+  }
+
+  .animate-spin-once {
+    animation: spinOnce 0.3s linear forwards;
+  }
 }
