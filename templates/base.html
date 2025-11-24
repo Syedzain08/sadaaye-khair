@@ -15,9 +15,32 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ url_for('static', filename='img/logo.svg') }}"
+    />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .prose table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .prose th,
+      .prose td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        text-align: left;
+      }
+
+      .prose thead th {
+        background-color: #f7f7f7;
+        font-weight: 600;
+      }
+    </style>
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body class="font-primary">

@@ -1,0 +1,251 @@
+{% extends 'base.html' %} {% block title %}Our Team{% endblock %} {% block
+content %}
+
+<section class="w-full py-6 px-4 md:px-10 mt-24 md:mt-32 lg:mt-18">
+  <!-- Header -->
+  <div class="text-center mb-12 md:mb-16">
+    <div class="flex items-center justify-center gap-2 mb-4">
+      <div
+        class="flex items-center justify-center h-12 w-12 bg-neutral-200 rounded-full"
+      >
+        <img
+          src="{{ url_for('static', filename='img/logo.svg') }}"
+          alt="Sadaaye Khair Logo"
+          class="w-8 h-8 object-contain"
+        />
+      </div>
+      <div class="text-primary-700 font-primary font-bold text-sm md:text-md">
+        Sadaaye Khair
+      </div>
+    </div>
+
+    <h1 class="text-3xl md:text-5xl font-bold text-primary-500 mb-4">
+      Meet Our Team
+    </h1>
+    <p class="text-graphite-500 text-base md:text-lg max-w-2xl mx-auto">
+      Dedicated individuals working together to create positive change in our
+      communities
+    </p>
+  </div>
+
+  <!-- Executive Leadership -->
+  <div class="mb-16 md:mb-20">
+    <h2
+      class="text-2xl md:text-3xl font-bold text-primary-500 mb-8 text-center"
+    >
+      Executive Leadership
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Founder & Director -->
+      <div
+        class="bg-neutral-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div
+          class="relative w-full overflow-hidden bg-gray-100"
+          style="padding-top: 100%"
+        >
+          <img
+            src="https://picsum.photos/400/400?random=1"
+            alt="Asad Haider Raza"
+            class="absolute inset-0 w-full h-full object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-xl md:text-2xl font-bold text-primary-500 mb-2">
+            Asad Haider Raza
+          </h3>
+          <p class="text-primary-600 font-semibold mb-3">Founder & Director</p>
+          <p class="text-graphite-500 text-sm">
+            Providing vision and leadership to align the organization with its
+            mission and values
+          </p>
+        </div>
+      </div>
+
+      <!-- CEO & CFO -->
+      <div
+        class="bg-neutral-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div
+          class="relative w-full overflow-hidden bg-gray-100"
+          style="padding-top: 100%"
+        >
+          <img
+            src="https://picsum.photos/400/400?random=2"
+            alt="Syed Qasim Abbas"
+            class="absolute inset-0 w-full h-full object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-xl md:text-2xl font-bold text-primary-500 mb-2">
+            Syed Qasim Abbas
+          </h3>
+          <p class="text-primary-600 font-semibold mb-3">
+            Co-Founder, CEO & CFO
+          </p>
+          <p class="text-graphite-500 text-sm">
+            Leading operations and managing finances to execute the
+            organization's strategy
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Management Team -->
+  <div class="mb-16 md:mb-20">
+    <h2
+      class="text-2xl md:text-3xl font-bold text-primary-500 mb-8 text-center"
+    >
+      Management Team
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- Marketing Manager -->
+      <div
+        class="bg-neutral-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div
+          class="relative w-full overflow-hidden bg-gray-100"
+          style="padding-top: 100%"
+        >
+          <img
+            src="/static/img/headshots/zain-bin-saqib-headshot.jpeg"
+            alt="Muhammad Zain Bin Saqib"
+            class="absolute inset-0 w-full h-full object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-lg md:text-xl font-bold text-primary-500 mb-2">
+            M. Zain Bin Saqib
+          </h3>
+          <p class="text-primary-600 font-semibold text-sm mb-3">
+            Marketing Manager
+          </p>
+          <p class="text-graphite-500 text-sm">
+            Managing marketing strategies and community outreach initiatives
+          </p>
+        </div>
+      </div>
+
+      <!-- Lead Developer -->
+      <div
+        class="bg-neutral-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div
+          class="relative w-full overflow-hidden bg-gray-100"
+          style="padding-top: 100%"
+        >
+          <img
+            src="/static/img/headshots/syed_zain_uI_abideen_headshot.jpg"
+            alt="Syed Zain Ul Abideen"
+            class="absolute inset-0 w-full h-full object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-lg md:text-xl font-bold text-primary-500 mb-2">
+            Syed Zain Ul Abideen
+          </h3>
+          <p class="text-primary-600 font-semibold text-sm mb-3">
+            Lead Developer
+          </p>
+          <p class="text-graphite-500 text-sm">
+            Overseeing technical systems and digital platform development
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specialist Team -->
+  <div>
+    <h2
+      class="text-2xl md:text-3xl font-bold text-primary-500 mb-8 text-center"
+    >
+      Specialist Team
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- DevOps Developer -->
+      <div
+        class="bg-neutral-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div
+          class="relative w-full overflow-hidden bg-gray-100"
+          style="padding-top: 100%"
+        >
+          <img
+            src="https://picsum.photos/400/400?random=5"
+            alt="Hashir Lodhi"
+            class="absolute inset-0 w-full h-full object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-lg md:text-xl font-bold text-primary-500 mb-2">
+            Hashir Lodhi
+          </h3>
+          <p class="text-primary-600 font-semibold text-sm mb-3">
+            DevOps / CI-CD Developer
+          </p>
+          <p class="text-graphite-500 text-sm">
+            Building deployment pipelines and maintaining backend infrastructure
+          </p>
+        </div>
+      </div>
+
+      <!-- Content Manager & Graphic Designer -->
+      <div
+        class="bg-neutral-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <div
+          class="relative w-full overflow-hidden bg-gray-100"
+          style="padding-top: 100%"
+        >
+          <img
+            src="https://picsum.photos/400/400?random=6"
+            alt="Rafeh Fraz"
+            class="absolute inset-0 w-full h-full object-top"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-lg md:text-xl font-bold text-primary-500 mb-2">
+            Rafeh Fraz
+          </h3>
+          <p class="text-primary-600 font-semibold text-sm mb-3">
+            Content Manager & Graphic Designer
+          </p>
+          <p class="text-graphite-500 text-sm">
+            Creating visual content and communications for campaigns
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="mt-16 md:mt-20 text-center bg-linear-to-r from-primary-500 to-primary-600 rounded-2xl p-8 md:p-12"
+  >
+    <h2 class="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
+      Want to Make a Difference?
+    </h2>
+    <p class="text-neutral-200 text-base md:text-lg mb-6 max-w-2xl mx-auto">
+      Join our team and help us create positive change in communities across the
+      region
+    </p>
+    <a
+      href="callto:+923001234567"
+      class="inline-block px-6 py-3 md:px-8 md:py-4 rounded-xl bg-neutral-200 text-primary-600 font-bold hover:bg-white transition-colors text-sm md:text-base"
+    >
+      Get In Touch
+    </a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,6 +1,11 @@
 {% extends 'base.html' %} {% block title %}{{ title }}{% endblock %} {% block
 content %}
-<article class="prose prose-lg max-w-4xl mx-auto py-12 mt-12">
-  {{content | safe}}
+<article class="prose prose-lg max-w-4xl mx-auto py-12 px-10 mt-12">
+  <div class="overflow-x-auto">
+    <table class="w-full">
+      {{ content | safe }}
+    </table>
+  </div>
 </article>
+
 {% endblock %}

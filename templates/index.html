@@ -200,93 +200,82 @@
 </section>
 <section class="relative px-4 md:px-10 py-8 md:py-12" id="our-stories">
   <h2
-    class="text-2xl md:text-4xl font-bold text-primary-500 mt-4 md:mt-8 mb-4 md:mb-5 text-center"
+    class="text-2xl md:text-4xl font-bold text-primary-500 mt-4 md:mt-8 mb-6 md:mb-10 text-center"
   >
     Our Stories
   </h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-    <div
-      class="p-4 md:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow bg-neutral-200 hover:cursor-pointer"
+
+  {% if blogs %}
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    {% for blog in blogs %}
+    <a
+      href="/articles/{{ blog.slug }}/"
+      class="group block bg-neutral-200 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
     >
-      <div>
+      <!-- Image Container with fixed aspect ratio -->
+      <div
+        class="relative w-full overflow-hidden bg-gray-100"
+        style="padding-top: 66.67%"
+      >
         <img
-          src="https://picsum.photos/600/400?random=1"
-          alt="blog1"
-          class="rounded-xl mb-3 md:mb-4 w-full"
+          src="{% if blog.thumbnail %}/content/{{ blog.slug }}/{{ blog.thumbnail }}{% else %}https://picsum.photos/600/400?random={{ loop.index }}{% endif %}"
+          alt="{{ blog.title }}"
+          class="absolute inset-0 w-full h-full object-cover group-hover:shadow-lg transition-transform duration-300"
+          loading="lazy"
         />
       </div>
-      <h3 class="text-xl md:text-2xl font-bold text-primary-500 mb-2 md:mb-4">
-        Story Title 1
-      </h3>
-      <p class="text-graphite-500 mb-3 md:mb-4 text-sm md:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-        sunt incidunt fuga maxime. Dolore quae perferendis quasi corrupti quidem
-        amet non deleniti, tempore facere maiores pariatur ex suscipit explicabo
-        architecto in! Obcaecati, eaque excepturi aspernatur adipisci magni
-        tempora minima voluptatibus dolorem. Quisquam autem eum atque, veniam
-        repellendus expedita facere at!
-      </p>
-      <a
-        href="/"
-        class="mt-4 text-primary-500 hover:underline text-sm md:text-base"
-        >Read More</a
-      >
-    </div>
-    <div
-      class="p-4 md:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow bg-neutral-200 hover:cursor-pointer"
-    >
-      <div>
-        <img
-          src="https://picsum.photos/600/400?random=2"
-          alt="blog1"
-          class="rounded-xl mb-3 md:mb-4 w-full"
-        />
+
+      <!-- Content Container -->
+      <div class="p-5 md:p-6">
+        <!-- Date Badge (if exists) -->
+        {% if blog.date %}
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-symbols-outlined text-primary-500 text-sm"
+            >calendar_today</span
+          >
+          <span class="text-xs md:text-sm text-graphite-500 font-medium"
+            >{{ blog.date }}</span
+          >
+        </div>
+        {% endif %}
+
+        <!-- Title -->
+        <h3
+          class="text-lg md:text-xl font-bold text-primary-500 mb-2 md:mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors"
+        >
+          {{ blog.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="text-graphite-500 text-sm md:text-base mb-4 line-clamp-3">
+          {{ blog.description }}
+        </p>
+
+        <!-- Read More Link -->
+        <div
+          class="flex items-center text-primary-500 font-semibold text-sm md:text-base group-hover:text-primary-600 transition-colors"
+        >
+          <span>Read More</span>
+          <span
+            class="material-symbols-outlined ml-1 text-lg group-hover:translate-x-1 transition-transform"
+            >arrow_forward</span
+          >
+        </div>
       </div>
-      <h3 class="text-xl md:text-2xl font-bold text-primary-500 mb-2 md:mb-4">
-        Story Title 2
-      </h3>
-      <p class="text-graphite-500 mb-3 md:mb-4 text-sm md:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-        sunt incidunt fuga maxime. Dolore quae perferendis quasi corrupti quidem
-        amet non deleniti, tempore facere maiores pariatur ex suscipit explicabo
-        architecto in! Obcaecati, eaque excepturi aspernatur adipisci magni
-        tempora minima voluptatibus dolorem. Quisquam autem eum atque, veniam
-        repellendus expedita facere at!
-      </p>
-      <a
-        href="/"
-        class="mt-4 text-primary-500 hover:underline text-sm md:text-base"
-        >Read More</a
-      >
-    </div>
-    <div
-      class="p-4 md:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow bg-neutral-200 hover:cursor-pointer"
-    >
-      <div>
-        <img
-          src="https://picsum.photos/600/400?random=3"
-          alt="blog1"
-          class="rounded-xl mb-3 md:mb-4 w-full"
-        />
-      </div>
-      <h3 class="text-xl md:text-2xl font-bold text-primary-500 mb-2 md:mb-4">
-        Story Title 3
-      </h3>
-      <p class="text-graphite-500 mb-3 md:mb-4 text-sm md:text-base">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-        sunt incidunt fuga maxime. Dolore quae perferendis quasi corrupti quidem
-        amet non deleniti, tempore facere maiores pariatur ex suscipit explicabo
-        architecto in! Obcaecati, eaque excepturi aspernatur adipisci magni
-        tempora minima voluptatibus dolorem. Quisquam autem eum atque, veniam
-        repellendus expedita facere at!
-      </p>
-      <a
-        href="/"
-        class="mt-4 text-primary-500 hover:underline text-sm md:text-base"
-        >Read More</a
-      >
-    </div>
+    </a>
+    {% endfor %}
   </div>
+  {% else %}
+  <div class="text-center py-12">
+    <span class="material-symbols-outlined text-graphite-300 text-6xl mb-4"
+      >article</span
+    >
+    <p class="text-graphite-500 text-lg md:text-xl">
+      No stories available at the moment.
+    </p>
+  </div>
+  {% endif %}
+
   <div
     class="absolute bottom-0 left-0 right-0 h-px bg-gray-200 translate-y-1/2"
   ></div>
