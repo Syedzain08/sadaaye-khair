@@ -20,7 +20,7 @@
             <p
               class="text-xs text-accent-500 mt-1 group-hover:text-accent-800 transition-colors duration-300"
             >
-              Millions of Smiles, One Mission
+              Hope Speaks, We Answer
             </p>
           </div>
         </a>
@@ -36,7 +36,7 @@
         <a
           href="{{ url_for('index') }}#about-us"
           class="text-accent-700 hover:text-primary-500 font-medium transition-colors duration-200 py-2 mr-10"
-          >Our Story</a
+          >About Us</a
         >
         <a
           href="{{ url_for('index') }}#our-stories"
@@ -57,11 +57,11 @@
         >
       </div>
 
-      <!-- Emergency Call Button & Mobile Menu -->
+      <!-- Action Buttons -->
       <div class="flex items-center justify-center space-x-5">
-        <!-- Emergency Call Button -->
+        <!-- Desktop Donation Button -->
         <a
-          href="/"
+          href="{{ url_for('donate') }}"
           class="hidden sm:flex bg-primary-500 text-white font-bold rounded-xl px-4 py-2 text-sm hover:bg-primary-600 transform transition-all duration-300 items-center gap-2"
         >
           <span class="material-symbols-outlined text-lg">
@@ -70,9 +70,9 @@
           <span class="hidden md:inline">Make your contribution</span>
         </a>
 
-        <!-- Mobile Emergency Button -->
+        <!-- Mobile Donation Icon -->
         <a
-          href="/"
+          href="{{ url_for('donate') }}"
           class="sm:hidden flex items-center bg-primary-500 text-white rounded-full p-3 hover:bg-primary-600 transition-colors duration-200 shadow-lg"
         >
           <span class="material-symbols-outlined text-xl">
@@ -127,7 +127,7 @@
         <!-- Mobile Donation Button -->
         <div class="pt-6 border-t border-gray-200 mt-4">
           <a
-            href="tel:+447494222307"
+            href="{{ url_for('donate') }}"
             class="flex items-center justify-center bg-primary-500 text-white font-bold rounded-xl px-5 py-4 hover:bg-primary-600 transition-colors duration-200 gap-3 shadow-lg"
           >
             <span class="material-symbols-outlined text-lg"

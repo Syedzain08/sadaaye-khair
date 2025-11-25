@@ -1,0 +1,47 @@
+{% if show_intiative_card %}
+<!-- Mobile Initiative Card  -->
+
+<div class="md:hidden mt-6">
+  <div class="relative bg-neutral-200 px-4 pt-14 pb-4 rounded-2xl shadow-lg">
+    <div class="flex justify-between absolute top-4 left-4 right-4">
+      <!-- SVG Icon -->
+      <div class="flex items-center gap-2">
+        <!-- Logo with background -->
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-neutral-200 rounded-full"
+        >
+          <img
+            src="{{ url_for('static', filename='img/logo.svg') }}"
+            alt="Sadaaye Khair Logo"
+            class="w-8 h-8 object-contain"
+          />
+        </div>
+        <!-- Text -->
+        <div class="text-primary-700 font-primary font-bold text-sm">
+          Sadaaye Khair
+        </div>
+      </div>
+      <div
+        class="text-primary-700 font-primary font-bold text-xs flex items-center"
+      >
+        <span class="material-symbols-outlined mr-1 text-sm">
+          radio_button_checked
+        </span>
+        2025
+      </div>
+    </div>
+
+    <h3 class="text-primary-500 font-bold text-xl">Our Current Intitiative</h3>
+    <p class="text-primary-700 mt-2 mb-4 text-sm">
+      {{ initiative_description }}
+    </p>
+
+    <a
+      href="{{ url_for('donate') }}"
+      class="px-4 py-2 mt-4 rounded-xl bg-graphite-700 text-neutral-200 hover:bg-graphite-500 active:bg-graphite-800 text-sm"
+      >Donate Now</a
+    >
+  </div>
+</div>
+{% endif %}
+<!-- End Mobile Initiative Card -->

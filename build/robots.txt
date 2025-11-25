@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: https://sadaaye-khair.vercel.app/sitemap.xml

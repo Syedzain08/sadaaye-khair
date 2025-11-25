@@ -30,63 +30,7 @@
     </div>
 
     <!-- Bottom-right text -->
-    {% if show_intiative_card %}
-    <div
-      class="absolute bottom-0 right-0 z-20 flex-col items-end p-4 md:p-8 hidden md:flex"
-    >
-      <div
-        class="relative bg-neutral-200 px-6 pt-16 pb-6 rounded-3xl shadow-lg max-w-md"
-      >
-        <div
-          class="flex justify-between absolute top-6 left-6 right-6 items-center"
-        >
-          <!-- Logo + Name -->
-          <div class="flex items-center gap-2">
-            <!-- Logo with background -->
-            <div
-              class="flex items-center justify-center h-12 w-12 bg-neutral-200 rounded-full"
-            >
-              <img
-                src="{{ url_for('static', filename='img/logo.svg') }}"
-                alt="Sadaaye Khair Logo"
-                class="w-8 h-8 object-contain"
-              />
-            </div>
-
-            <!-- Text -->
-            <div class="text-primary-700 font-primary font-bold text-md">
-              Sadaaye Khair
-            </div>
-          </div>
-
-          <!-- Year / Badge -->
-          <div
-            class="text-primary-700 font-primary font-bold text-sm flex items-center"
-          >
-            <span class="material-symbols-outlined mr-1 text-base">
-              radio_button_checked
-            </span>
-            2025
-          </div>
-        </div>
-
-        <h3 class="text-primary-500 font-bold text-2xl">
-          Our Current Intitiative
-        </h3>
-        <p class="text-primary-700 mt-2 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
-          itaque? Atque illo provident aliquam officiis, ipsam eaque laudantium
-          quo ipsa!
-        </p>
-
-        <a
-          href="/"
-          class="px-4 py-2 mt-4 rounded-xl bg-graphite-700 text-neutral-200 hover:bg-graphite-500 active:bg-graphite-800"
-          >Donate Now</a
-        >
-      </div>
-    </div>
-    {% endif %}
+    {% include 'partials/initiative_card.html' %}
 
     <div class="absolute inset-0 bg-black/30"></div>
 
@@ -94,56 +38,7 @@
       class="absolute bottom-0 left-0 right-0 h-px bg-gray-500 translate-y-1/2"
     ></div>
   </div>
-  {% if show_intiative_card %}
-  <!-- Mobile Initiative Card  -->
-
-  <div class="md:hidden mt-6">
-    <div class="relative bg-neutral-200 px-4 pt-14 pb-4 rounded-2xl shadow-lg">
-      <div class="flex justify-between absolute top-4 left-4 right-4">
-        <!-- SVG Icon -->
-        <div class="flex items-center gap-2">
-          <!-- Logo with background -->
-          <div
-            class="flex items-center justify-center h-12 w-12 bg-neutral-200 rounded-full"
-          >
-            <img
-              src="{{ url_for('static', filename='img/logo.svg') }}"
-              alt="Sadaaye Khair Logo"
-              class="w-8 h-8 object-contain"
-            />
-          </div>
-          <!-- Text -->
-          <div class="text-primary-700 font-primary font-bold text-sm">
-            Sadaaye Khair
-          </div>
-        </div>
-        <div
-          class="text-primary-700 font-primary font-bold text-xs flex items-center"
-        >
-          <span class="material-symbols-outlined mr-1 text-sm">
-            radio_button_checked
-          </span>
-          2025
-        </div>
-      </div>
-
-      <h3 class="text-primary-500 font-bold text-xl">
-        Our Current Intitiative
-      </h3>
-      <p class="text-primary-700 mt-2 mb-4 text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
-        itaque? Atque illo provident aliquam officiis, ipsam eaque laudantium
-        quo ipsa!
-      </p>
-
-      <a
-        href="/"
-        class="px-4 py-2 mt-4 rounded-xl bg-graphite-700 text-neutral-200 hover:bg-graphite-500 active:bg-graphite-800 text-sm"
-        >Donate Now</a
-      >
-    </div>
-    {% endif %}
-  </div>
+  {% include 'partials/mobile_initiative_card.html' %}
 </section>
 <section
   id="about-us"
@@ -171,18 +66,19 @@
     <h2
       class="text-2xl md:text-4xl font-bold text-primary-500 mt-4 md:mt-8 mb-3 md:mb-5"
     >
-      Millions of Smiles, One Missions
+      Hope Speaks, We Answer
     </h2>
     <p class="text-graphite-500 mb-6 md:mb-10 text-sm md:text-base">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo blanditiis
-      voluptas unde! Dolorem, aliquam minima. Quasi nisi quos id voluptatem
-      obcaecati aspernatur harum magni enim dicta voluptas autem asperiores
-      voluptatibus beatae voluptates fugiat illo at, est ipsam placeat inventore
-      maxime sit ut dolore? Reiciendis tempora modi hic omnis, consequatur
-      explicabo?
+      At Sadaaye Khair, we believe in the power of collective action to bring
+      about meaningful change. Our mission is to empower communities through
+      targeted initiatives that address critical needs. Join us in our journey
+      to create a brighter future for all.
+    </p>
+    <p>
+      <strong class="text-primary-600">Your support makes a difference.</strong>
     </p>
     <a
-      href="/"
+      href="{{ url_for('donate') }}"
       class="px-4 py-3 md:py-4 mt-4 rounded-xl bg-graphite-700 text-neutral-200 hover:bg-graphite-500 active:bg-graphite-800 text-sm md:text-base inline-block"
       >Donate Now</a
     >
@@ -270,7 +166,7 @@
     <span class="material-symbols-outlined text-graphite-300 text-6xl mb-4"
       >article</span
     >
-    <p class="text-graphite-500 text-lg md:text-xl">
+    <p class="text-graphite-500 text-xl md:text-2xl">
       No stories available at the moment.
     </p>
   </div>

@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block title %}Donate{% endblock %} {% block content
+%}
+
+<section
+  class="w-full min-h-[70vh] flex items-center justify-center px-4 md:px-10 py-12 md:py-30"
+>
+  <div class="max-w-2xl w-full text-center">
+    <!-- Icon -->
+    <div class="flex justify-center mb-6">
+      <div class="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
+        <span class="text-primary-500 text-5xl md:text-6xl">
+          <img
+            src="{{ url_for('static', filename='img/warning.png') }}"
+            alt="WArning "
+          />
+        </span>
+      </div>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="text-3xl md:text-5xl font-bold text-primary-500 mb-4 md:mb-6">
+      We're Sorry!
+    </h1>
+
+    <!-- Message -->
+    <div class="bg-neutral-200 rounded-2xl p-6 md:p-8 shadow-lg mb-6 md:mb-8">
+      <p class="text-graphite-600 text-base md:text-lg mb-4 md:mb-6">
+        Our online payment system is currently unavailable. We apologize for the
+        inconvenience.
+      </p>
+
+      <div class="border-t border-gray-300 pt-4 md:pt-6">
+        <p class="text-graphite-700 font-semibold text-lg md:text-xl mb-3">
+          You can still support us!
+        </p>
+        <p class="text-graphite-600 text-sm md:text-base mb-4">
+          Please contact us directly at:
+        </p>
+
+        <!-- Phone Number -->
+        <a
+          href="tel:+923224099535"
+          class="inline-flex items-center gap-3 bg-primary-500 text-neutral-200 px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold text-lg md:text-xl hover:bg-primary-600 active:bg-primary-700 transition-colors shadow-md"
+        >
+          <span class="material-symbols-outlined text-2xl">phone</span>
+          <span>+92 322 4099535</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Additional Message -->
+    <p class="text-graphite-500 text-sm md:text-base">
+      We're working to restore our online donation system as quickly as
+      possible. Thank you for your patience and continued support.
+    </p>
+
+    <!-- Back to Home Button -->
+    <a
+      href="{{ url_for('index') }}"
+      class="inline-flex items-center gap-2 mt-6 md:mt-8 text-primary-500 hover:text-primary-600 font-semibold text-base md:text-lg transition-colors"
+    >
+      <span class="material-symbols-outlined">arrow_back</span>
+      <span>Back to Home</span>
+    </a>
+  </div>
+</section>
+
+{% endblock %}
