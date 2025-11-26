@@ -42,6 +42,86 @@
       }
     </style>
     <title>Donate</title>
+    
+    <meta
+      name="description"
+      content="Sadaaye Khair empowers communities through targeted initiatives addressing critical needs. Join us in building a brighter future through collective action and meaningful change."
+    />
+     
+    <link rel="canonical" href="https://sadaaye-khair.vercel.app/donate/" />
+     
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Sadaaye Khair - Hope Speaks, We Answer"
+    />
+    <meta
+      property="og:description"
+      content="Empowering communities through targeted initiatives. Build a brighter future one donation at a time with Sadaaye Khair."
+    />
+    <meta property="og:url" content="https://sadaaye-khair.vercel.app/donate/" />
+    <meta
+      property="og:image"
+      content="https://sadaaye-khair.vercel.app/static/img/share-banner.jpeg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Sadaaye Khair" />
+     
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sadaaye Khair - Hope Speaks, We Answer"
+    />
+    <meta
+      name="twitter:description"
+      content="Empowering communities through targeted initiatives. Build a brighter future one donation at a time with Sadaaye Khair."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sadaaye-khair.vercel.app/static/img/share-banner.jpeg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Sadaaye Khair - Building a Brighter Future"
+    />
+     
+    <!-- Organization & Nonprofit Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Sadaaye Khair",
+        "alternateName": "Sadaaye Khair Foundation",
+        "url": "https://sadaaye-khair.vercel.app/",
+        "logo": "https://sadaaye-khair.vercel.app/static/img/logo.svg",
+        "image": "https://sadaaye-khair.vercel.app/static/img/share-banner.jpeg",
+        "description": "Student-led social welfare organization empowering communities through targeted initiatives that address critical needs. Building a brighter future through collective action.",
+        "telephone": "+923224099535",
+        "email": "info.sadaayekhair@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lahore",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Lahore",
+          "containedIn": {
+            "@type": "State",
+            "name": "Punjab"
+          }
+        },
+        "sameAs": ["https://www.instagram.com/sadaayekhair/"],
+        "foundingDate": "2025-11-22"
+      }
+    </script>
+    
   </head>
   <body class="font-primary">
     <!-- Navbar -->
@@ -75,7 +155,7 @@
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center justify-center">
         <a
-          href="/#hero"
+          href="/"
           class="text-accent-700 hover:text-primary-500 font-medium transition-colors duration-200 py-2 mr-10"
           >Home</a
         >
@@ -145,7 +225,7 @@
     >
       <div class="px-6 py-6 space-y-1">
         <a
-          href="/#hero"
+          href="/"
           class="block text-accent-700 hover:text-primary-500 hover:bg-gray-50 font-medium py-3 px-3 rounded-lg transition-all duration-200"
           >Home</a
         >
@@ -252,7 +332,7 @@
 </script> 
 
 <section
-  class="w-full min-h-[70vh] flex items-center justify-center px-4 md:px-10 py-12 md:py-30"
+  class="w-full min-h-[70vh] flex items-center justify-center px-4 md:px-10 py-12 md:py-30 mt-20"
 >
   <div class="max-w-2xl w-full text-center">
     <!-- Icon -->
@@ -261,7 +341,7 @@
         <span class="text-primary-500 text-5xl md:text-6xl">
           <img
             src="/static/img/warning.png"
-            alt="WArning "
+            alt="Warning "
           />
         </span>
       </div>
@@ -381,13 +461,20 @@
               info.sadaayekhair@gmail.com
             </a>
           </li>
-          <li>
+          <li class="flex gap-2">
             Phone:
-            <a
-              href="tel:+923224099535"
-              class="hover:underline text-neutral-300 break-all"
-              >+92 322 4099535</a
-            >
+            <div class="flex flex-col">
+              <a
+                href="tel:+923224099535"
+                class="hover:underline text-neutral-300 break-all"
+                >+92 322 4099535</a
+              >
+              <a
+                href="tel:+923094122048"
+                class="hover:underline text-neutral-300 break-all"
+                >+92 309 4122048</a
+              >
+            </div>
           </li>
         </ul>
       </div>
@@ -396,7 +483,7 @@
     <!-- Image -->
     <div class="w-full sm:w-2/3 md:w-1/2 lg:w-1/5">
       <img
-        src="https://picsum.photos/600/400?random=4"
+        src="/static/img/footer-image.png"
         alt="footer-image"
         class="rounded-xl w-full"
       />

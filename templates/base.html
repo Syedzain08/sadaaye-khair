@@ -41,7 +41,87 @@
         font-weight: 600;
       }
     </style>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Sadaaye Khair{% endblock %}</title>
+    {% block seo_description %}
+    <meta
+      name="description"
+      content="Sadaaye Khair empowers communities through targeted initiatives addressing critical needs. Join us in building a brighter future through collective action and meaningful change."
+    />
+    {% endblock %} {% block seo_canonical %}
+    <link rel="canonical" href="{{ request.url }}" />
+    {% endblock %} {% block seo_og %}
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Sadaaye Khair - Hope Speaks, We Answer"
+    />
+    <meta
+      property="og:description"
+      content="Empowering communities through targeted initiatives. Build a brighter future one donation at a time with Sadaaye Khair."
+    />
+    <meta property="og:url" content="{{ request.url }}" />
+    <meta
+      property="og:image"
+      content="{{ url_for('static', filename='img/share-banner.jpeg', _external=True) }}"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Sadaaye Khair" />
+    {% endblock %} {% block seo_twitter %}
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Sadaaye Khair - Hope Speaks, We Answer"
+    />
+    <meta
+      name="twitter:description"
+      content="Empowering communities through targeted initiatives. Build a brighter future one donation at a time with Sadaaye Khair."
+    />
+    <meta
+      name="twitter:image"
+      content="{{ url_for('static', filename='img/share-banner.jpeg', _external=True) }}"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Sadaaye Khair - Building a Brighter Future"
+    />
+    {% endblock %} {% block seo_schema %}
+    <!-- Organization & Nonprofit Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Sadaaye Khair",
+        "alternateName": "Sadaaye Khair Foundation",
+        "url": "{{ request.url_root }}",
+        "logo": "{{ url_for('static', filename='img/logo.svg', _external=True) }}",
+        "image": "{{ url_for('static', filename='img/share-banner.jpeg', _external=True) }}",
+        "description": "Student-led social welfare organization empowering communities through targeted initiatives that address critical needs. Building a brighter future through collective action.",
+        "telephone": "+923224099535",
+        "email": "info.sadaayekhair@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lahore",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Lahore",
+          "containedIn": {
+            "@type": "State",
+            "name": "Punjab"
+          }
+        },
+        "sameAs": ["https://www.instagram.com/sadaayekhair/"],
+        "foundingDate": "2025-11-22"
+      }
+    </script>
+    {% endblock %}
   </head>
   <body class="font-primary">
     {% include 'partials/navbar.html' %} {% block content %}{% endblock %} {%

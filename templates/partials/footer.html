@@ -64,13 +64,20 @@
               info.sadaayekhair@gmail.com
             </a>
           </li>
-          <li>
+          <li class="flex gap-2">
             Phone:
-            <a
-              href="tel:+923224099535"
-              class="hover:underline text-neutral-300 break-all"
-              >+92 322 4099535</a
-            >
+            <div class="flex flex-col">
+              <a
+                href="tel:+923224099535"
+                class="hover:underline text-neutral-300 break-all"
+                >+92 322 4099535</a
+              >
+              <a
+                href="tel:+923094122048"
+                class="hover:underline text-neutral-300 break-all"
+                >+92 309 4122048</a
+              >
+            </div>
           </li>
         </ul>
       </div>
@@ -79,7 +86,7 @@
     <!-- Image -->
     <div class="w-full sm:w-2/3 md:w-1/2 lg:w-1/5">
       <img
-        src="https://picsum.photos/600/400?random=4"
+        src="{{ url_for('static', filename='img/footer-image.png') }}"
         alt="footer-image"
         class="rounded-xl w-full"
       />
